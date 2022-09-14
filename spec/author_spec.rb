@@ -9,5 +9,17 @@ RSpec.describe Author do
     @villette = charlotte_bronte.write("Villette", "1853")
   end
 
-  describe ''
+  describe '#initialize' do
+    it 'exists' do
+      expect(@charlotte_bronte).to be_instance_of Author
+    end
+
+    it 'has a name' do
+      expect(@charlotte_bronte.name).to eq("Charlotte Bronte")
+    end
+
+    it 'has no books to start' do
+      expect(@charlotte_bronte.books).to eq([])
+    end
+  end
 end
